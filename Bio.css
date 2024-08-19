@@ -1,0 +1,180 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('desmumtz15.jpg');
+    font-family: 'Playfair Display', serif;
+    background-size: cover;
+    background-position: center;
+    color: #F8F6F4;
+    line-height: 1.6;
+}
+
+.header {
+    background-image: url('header-background.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    color: #F8F6F4;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.header p {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 5px 15px rgba(248, 247, 247, 0.1);
+    border-radius: 8px;
+    margin-top: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+.container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.profile-img img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills li {
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 5px;
+    font-size: 1rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.skills li:hover {
+    transform: scale(1.1);
+}
+
+.Education .Education-box {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.projects .project-box {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.projects h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact .content-box {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact p {
+    font-size: 1.2rem;
+}
+
+.email-link {
+    color: #068FFF;
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.email-link:hover {
+    opacity: 0.8;
+}
+
+.footer {
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    padding: 20px 0;
+    color: #F8F6F4;
+    animation: fadeIn 1s ease-in-out;
+}
