@@ -5,21 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
-    <link rel="stylesheet" href="Bio.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Bio.css"> <!-- Link to the CSS file -->
+    <style>
+        /* Lightbox styles */
+        .lightbox {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
 </head>
 <body>
+    <!-- Header Section -->
     <div class="container">
         <div class="header">
             <div class="header-content">
                 <div class="profile-img">
                     <img src="uuu.jpg" alt="Your Name">
+                </div>
                 <h1>Dale Bryan M. Olila</h1>
-                <p>Student | Coach | IT innovator </p>
+                <p>Student | Coach | IT Innovator</p>
             </div>
         </div>
     </div>
 
+    <!-- About Section -->
     <section class="about">
         <div class="container">
             <div class="content-box">
@@ -27,34 +49,47 @@
                     <div class="profile-img">
                         <img src="me.jpg" alt="Your Name">
                     </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>About Me</h2>
-                    <p><strong>Certifications:</strong> NCII passer (Computer Hardware and Servicing)</p>
-                    <p><strong>Specializations:</strong> MERN Stack Developer, UI/UX Developer</p>
-                    
-                    
-
-                </div>
+                    <div class="about-text">
+                        <h2>About Me</h2>
+                        <p><strong>Specializations:</strong> MERN Stack Developer, UI/UX Developer</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section class="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="certification-box">
+                <div class="certification-item">
+                    <img src="Introduction to Cyber Security.png" alt="Certification 1" onclick="openLightbox(this.src)">
+                    <p>Introduction to Cyber Security</p>
+                </div>
+                <div class="certification-item">
+                    <img src="Ethical hacking 101.png" alt="Certification 2" onclick="openLightbox(this.src)">
+                    <p>Ethical Hacking 101</p>
+                </div>
+        </div>
+    </section>
+
+    <!-- Lightbox for larger certification images -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+    </div>
+
+    <!-- Education Section -->
     <section class="Education">
         <div class="container">
             <h2>Education</h2>
-            
             <div class="Education-box">
-               <p> I'm a graduate of a two-year course in Computer Technology and currently a 4th year BSIT (WMA) student.</p>
-                </div>
-                </div>
-                </section>
+                <p>I'm a graduate of a two-year course in Computer Technology and currently a 4th year BSIT (WMA) student.</p>
+            </div>
+        </div>
+    </section>
 
-    
-
+    <!-- Skills Section -->
     <section class="skills">
         <div class="container">
             <h2>Skills</h2>
@@ -69,39 +104,35 @@
                     <li>JavaScript</li>
                     <li>UI/UX Design</li>
                     <li>Responsive Web Design</li>
-                    <li>Mern Stack developer</li>
-
-                    
-                    
+                    <li>MERN Stack Developer</li>
                 </ul>
             </div>
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section class="projects">
         <div class="container">
             <h2>Projects</h2>
-    
             <div class="project">
                 <div class="project-box">
                     <img src="Hirayamanawari.png" alt="Hirayamanawari Cafe" style="width:100%; height:auto;">
                     <h3>Cafe Menu</h3>
                     <p>A Hirayamanawari cafe menu</p>
-                    <p>Using Html,Css, Bootstrap</p>
-                </div>
-            </div>
-    
-            <div class="project">
-                <div class="project-box">
-                    <img src="gallery.png" alt="Image gallery" style="width:100%; height:auto;">
-                    <h3>Image gallery</h3>
-                    <p>A Image gallery using API</p>
+                    <p>Using HTML, CSS, Bootstrap</p>
                 </div>
             </div>
             <div class="project">
                 <div class="project-box">
-                    <img src="Medicine.png" alt="Medicine inventory" style="width:100%; height:auto;">
-                    <h3>Medicine inventory</h3>
+                    <img src="gallery.png" alt="Image Gallery" style="width:100%; height:auto;">
+                    <h3>Image Gallery</h3>
+                    <p>An Image gallery using API</p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-box">
+                    <img src="Medicine.png" alt="Medicine Inventory" style="width:100%; height:auto;">
+                    <h3>Medicine Inventory</h3>
                     <p>Medicine POS inventory using Django</p>
                 </div>
             </div>
@@ -109,32 +140,44 @@
                 <div class="project-box">
                     <img src="capstone.png" alt="Capstone Project" style="width:100%; height:auto;">
                     <h3>EUnivate</h3>
-                    <p>EUnivate: A Web and Mobile-based Platform for Connecting Client & University Expertise with Project Management Tool </p>
+                    <p>EUnivate: A Web and Mobile-based Platform for Connecting Clients & University Expertise with Project Management Tools</p>
                     <p>Using MERN Stack</p>
                 </div>
             </div>
-    
-    
         </div>
     </section>
-    
 
+    <!-- Contact Section -->
     <section class="contact">
         <div class="container">
             <h2>Contact</h2>
             <div class="content-box">
                 <p>If you'd like to get in touch, feel free to email me at <a class="email-link" href="mailto:olildalebryan@gmail.com">olildalebryan@gmail.com</a>.</p>
-                <p>https://github.com/Dbryan01</p>
-                <p>https://www.linkedin.com/in/dbryan01/</p>
-
+                <p><a href="https://github.com/Dbryan01">GitHub Profile</a></p>
+                <p><a href="https://www.linkedin.com/in/dbryan01/">LinkedIn Profile</a></p>
             </div>
         </div>
     </section>
 
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Dale Bryan Olila. All rights reseved.</p>
+            <p>&copy; 2024 Dale Bryan Olila. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
